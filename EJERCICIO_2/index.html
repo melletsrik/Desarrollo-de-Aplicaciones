@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registro</h2>
+        <p>Complete el formulario para registrarse</p>
+        <form id="registerForm">
+           
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="Nombre" required minlength="2" maxlength="50">
+            </div>
+            <span id="nameError" class="error-message"></span>
+
+            
+            <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+            </div>
+            <span id="emailError" class="error-message"></span>
+
+            
+            <div class="input-container">
+                <i class="fas fa-user-tag"></i>
+                <input type="text" id="username" name="username" placeholder="Nombre de Usuario" required minlength="3" maxlength="20">
+            </div>
+            <span id="usernameError" class="error-message"></span>
+
+            
+            <div class="input-container">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required pattern="[0-9]{10}">
+            </div>
+            <span id="phoneError" class="error-message"></span>
+
+            
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required minlength="6">
+            </div>
+            <span id="passwordError" class="error-message"></span>
+
+            
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar Contraseña" required minlength="6">
+            </div>
+            <span id="confirmPasswordError" class="error-message"></span>
+
+            <button type="submit" class="submit-btn">Registrar</button>
+        </form>
+    </div>
+
+
+
+
+    <script>
+        
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            let valid = true;
+
+           
+            document.querySelectorAll('.error-message').forEach(function(element) {
+                element.textContent = '';
+            });
+
+            
+            const name = document.getElementById('name').value;
+            if (name.length < 2 || name.length > 50) {
+                document.getElementById('nameError').textContent = 'El nombre debe tener entre 2 y 50 caracteres.';
+                valid = false;
+            }
+
+            
+          
+            const address = document.getElementById('address').value;
+            if (address.length < 5 || address.length > 100) {
+                document.getElementById('addressError').textContent = 'La dirección debe tener entre 5 y 100 caracteres.';
+                valid = false;
+            }
+
+            
+            const phonePattern = /^[0-9]{10}$/;
+            const phone = document.getElementById('phone').value;
+            if (!phonePattern.test(phone)) {
+                document.getElementById('phoneError').textContent = 'El teléfono debe tener 10 dígitos.';
+                valid = false;
+            }
+
+           
+            const password = document.getElementById('password').value;
+            if (password.length < 6) {
+                document.getElementById('passwordError').textContent = 'La contraseña debe tener al menos 6 caracteres.';
+                valid = false;
+            }
+
+            
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
