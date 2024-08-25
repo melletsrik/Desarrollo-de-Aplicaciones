@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desarrollo de Aplicaciones!</title>
+        <meta charset="UTF-8"> <!--Conjunto de caracteres-->
+    </head>
+    <body>
+        <!--Titulo principal de la pagina-->
+        <h1 class="title">Hello World!</h1>
+        <em>done cursiva</em> <!--Pone el texto en cursiva-->
+        <!--Enlace a la pagina de Mozilla-->
+        <p><a href="https://www.mozilla.org/" title="La página de inicio de Mozilla" target="_blank">Mozilla</a></p>
+        <!--Formulario-->
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name">
+                </li>
+                <li>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="user_mail">
+                </li>
+                <li>
+                    <label for="msg">Mensaje:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+                <li>
+                    <input type="text" value="Por defecto este elemento se llena con este texto">
+                </li>
+                <li>
+                    <textarea>Por defecto, este elemento contiene este texto</textarea>
+                </li>
+                <!--Boton para enviar el formulario -->
+                <li class="button">
+                    <button type="submit">Envíe su mensaje</button>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>
