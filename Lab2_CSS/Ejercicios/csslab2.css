@@ -1,9 +1,6 @@
-
 .paginas { /*se cambio el nombre a paginas*/
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 15px;
+    padding: 10px;
     color: #fff;
 }
 * {
@@ -12,17 +9,28 @@
     box-sizing: border-box;
     font-family: Century Gothic;
 }
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
 header {
-    display: block;
-
+    background-color: #111;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
 }
 nav {
     display: flex;
+    justify-content: center;
     background-color: #414141;
+    padding: 10px 0;
 }
-.main{
+main {
     display: flex;
-    background-color: thistle;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px); /* Ajusta el espacio para header y footer */
+    background-color: #f7f7f7;
 }
 p{
     display: block;
@@ -32,14 +40,39 @@ p{
     margin-right: 20px;
     font-size: small;
 }
-
 .albumMasVendido {
     width: 100%;
     max-width: 300px;
     transition: transform 0.4s;
     padding: 10px; 
 }
-  
-.albumMasVendido:hover {
+  .albumMasVendido:hover {
     transform: scale(1.4); /*Agranda la imagen al 140% cuando este el mouse encima*/
+}
+.paginas:hover {
+    background-color: #333;
+    border-radius: 4px;
+}
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.album-cover {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+.album-details {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.album-info {
+    text-align: center;
 }
