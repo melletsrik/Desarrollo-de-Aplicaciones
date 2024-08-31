@@ -1,0 +1,45 @@
+
+.paginas { /*se cambio el nombre a paginas*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Century Gothic;
+}
+header {
+    display: block;
+
+}
+nav {
+    display: flex;
+    background-color: #414141;
+}
+.main{
+    display: flex;
+    background-color: thistle;
+}
+p{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: small;
+}
+
+.albumMasVendido {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.4s;
+    padding: 10px; 
+}
+  
+.albumMasVendido:hover {
+    transform: scale(1.4); /*Agranda la imagen al 140% cuando este el mouse encima*/
+}
