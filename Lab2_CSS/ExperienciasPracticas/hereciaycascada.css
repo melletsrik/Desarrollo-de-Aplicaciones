@@ -1,0 +1,52 @@
+/* hereciaycascada.css */  
+
+
+body {  
+    color: #333; 
+    font-family: Arial, sans-serif; 
+}  
+
+body {  
+    font-size: 16px; 
+}  
+
+
+.container {  
+    background-color: #f9f9f9; 
+    padding: 20px; 
+}  
+
+h1, h2, h3 {  
+    color: #0056b3;  
+}  
+
+.container p {  
+    margin: 10px 0; 
+}  
+
+ul {  
+    list-style-type: square; 
+}  
+
+.container a {  
+    text-decoration: underline; 
+}
+
+a {  
+    color: blue;
+}  
+
+.container a {  
+    color: green; 
+}  
+
+a[href$=".pdf"] {  
+    color: red; 
+}  
+
+a[href*="example"] {  
+    font-weight: bold; 
+}  
+a:visited {  
+    color: purple;
+}
