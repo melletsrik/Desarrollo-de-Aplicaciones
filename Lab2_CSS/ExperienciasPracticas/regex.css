@@ -1,0 +1,29 @@
+
+[class^="texto"] {  
+    font-weight: bold;  
+}  
+
+[class$="activo"] {  
+    color: green;  
+}  
+
+[class*="ejemplo"] {  
+    background-color: #f0f0f0;  
+    padding: 10px;  
+}  
+
+a[href^="#"] {  
+    background-color: gold;  
+}  
+
+a[href*="cAsE"] {  
+    color: pink;  
+}  
+ 
+a[href$=".org"] {  
+    color: red;  
+}  
+
+a[href^="https"][href$=".org"] {  
+    color: green;  
+}
