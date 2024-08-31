@@ -1,0 +1,47 @@
+/* Selectores por nombre */
+h1 {
+    color: #ff5722;
+    font-size:medium;
+}
+p {
+    color: #4caf50;
+    font-size: 16px;
+}
+ul {
+    color: #3f51b5;
+    font-size: 14px;
+    list-style-type: square;
+}
+
+/* Selectores por clase */
+.seccion {
+    padding: 20px;
+    background-color: #e0f2f1;
+}
+.parrafo {
+    color: #ff9800;
+}
+.unordered-list {
+    font-weight: bold;
+    color: #9c27b0;
+    font-size: 18px;
+}
+
+/* Selectores por ID */
+#main-title {
+    color: #2196f3;
+    font-size: 32px;
+    text-align: center;
+}
+#section1 h1 {
+    font-style: italic;
+    font-size:larger;
+}
+#footer {
+    background-color: #263238;
+    color: #ffffff;
+    padding: 10px;
+}
+#footer-text {
+    font-size: 14px;
+}
