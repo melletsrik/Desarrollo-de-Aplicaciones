@@ -1,0 +1,57 @@
+body {
+    background-color: #f1f3f4;
+    color: #202124;
+    font-family: Arial, sans-serif;
+}
+header h1 {
+    color: #1a73e8;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+/* Selectores de Atributos */
+input[type="text"] {
+    border: 2px solid #ff6f61;
+}
+a[href^="http"] {
+    color: #00bcd4;
+}
+/* Selectores de Pseudo-clases */
+a:hover {
+    text-decoration: none;
+    font-size: xx-large;
+    color: #f06292;
+}
+input:focus {
+    background-color:#e5ef50 ;
+    font-style: oblique;
+    font-size:large;
+}
+ul li:nth-child(3) {
+    color: pink;
+    font-size: medium;
+}
+h1:hover {
+    color: #f06292;
+}
+input:focus {
+    border-color: #64b5f6;
+}
+button:active {
+    background-color: #ff7043;
+}
+ul li:last-child {
+    font-style: italic;
+}
+section:hover h1 {
+    color: #66bb6a;
+}
+/* Selectores de Pseudo-elementos */
+p::first-line {
+    font-size: 20px;
+    font-weight: bold;
+}
+p::selection {
+    background-color: #ff4081;
+    color: #ffffff;
+}
