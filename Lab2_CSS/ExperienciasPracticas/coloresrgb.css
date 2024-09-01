@@ -1,0 +1,23 @@
+.cell-red {
+    background-color: rgb(255, 204, 204);
+}
+
+.cell-green {
+    background-color: rgb(204, 255, 204);
+}
+
+.cell-orange {
+    background-color: rgb(255, 228, 204);
+}
+
+.cell-blue {
+    background-color: rgb(204, 204, 255);
+}
+
+.cell-purple {
+    background-color: rgb(230, 204, 255);
+}
+
+.cell-yellow {
+    background-color: rgb(255, 255, 224);
+}

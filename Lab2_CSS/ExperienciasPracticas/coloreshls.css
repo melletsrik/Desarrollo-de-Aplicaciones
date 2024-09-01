@@ -1,0 +1,23 @@
+.cell-red {
+    background-color: hsl(0, 100%, 90%);
+}
+
+.cell-green {
+    background-color: hsl(120, 100%, 90%);
+}
+
+.cell-orange {
+    background-color: hsl(30, 100%, 90%);
+}
+
+.cell-blue {
+    background-color: hsl(240, 100%, 90%);
+}
+
+.cell-purple {
+    background-color: hsl(270, 100%, 90%);
+}
+
+.cell-yellow {
+    background-color: hsl(60, 100%, 90%);
+}
