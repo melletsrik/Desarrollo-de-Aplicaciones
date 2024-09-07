@@ -49,8 +49,12 @@ body {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
-    flex: 1 1 200px;
     max-width: 300px;
+}
+
+.icon {
+    font-size: 100000px ;
+    color: #000000;
 }
 
 /*Breakpoint para tablets*/
