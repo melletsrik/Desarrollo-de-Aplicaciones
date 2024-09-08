@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podómetro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #e5e5e5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 0 20px;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(80, 30, 180, 0.8), rgba(160, 40, 210, 0.8));
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .metrics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+        }
+
+        .metric {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .metric i {
+            font-size: 4em;
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+
+        .metric h2 {
+            margin-bottom: 10px;
+            font-size: 1.6em;
+            color: #4a90e2;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .metric p {
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        .metric:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: linear-gradient(135deg, rgba(80, 30, 180, 0.8), rgba(160, 40, 210, 0.8));
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+            border-radius: 15px;
+            font-size: 0.9em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .metrics {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Podómetro</h1>
+    </header>
+    
+    <div class="container">
+        <div class="metrics">
+            <div class="metric">
+                <i class="fas fa-walking"></i>
+                <h2>Pases</h2>
+                <p>10,235</p>
+            </div>
+            <div class="metric">
+                <i class="fas fa-route"></i>
+                <h2>Distancia</h2>
+                <p>8.2 km</p>
+            </div>
+            <div class="metric">
+                <i class="fas fa-fire"></i>
+                <h2>Calorías</h2>
+                <p>300</p>
+            </div>
+        </div>
+        
+        <div class="metrics">
+            <div class="metric">
+                <i class="fas fa-clock"></i>
+                <h2>Tiempo</h2>
+                <p>1:15:20</p>
+            </div>
+            <div class="metric">
+                <i class="fas fa-tachometer-alt"></i>
+                <h2>Meta</h2>
+                <p>12,000 pasos</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Podómetro App. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

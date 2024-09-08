@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Control</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 100px auto 100px;
+            grid-template-areas: 
+                "header header header"
+                "nav main sidebar"
+                "footer footer footer";
+            gap: 10px;
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            grid-area: main;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        sidebar {
+            grid-area: sidebar;
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .icon {
+            margin-right: 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-item i {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .grid-container {
+            justify-content: center;
+            align-content: center;
+        }
+
+        /* Alineación de elementos dentro de las áreas */
+        header, nav, main, sidebar, footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <header><i class="fas fa-tachometer-alt icon"></i> Tablero de Control</header>
+    <nav>
+        <div class="nav-item"><i class="fas fa-home"></i> Inicio</div>
+        <div class="nav-item"><i class="fas fa-chart-line"></i> Reportes</div>
+        <div class="nav-item"><i class="fas fa-cog"></i> Configuración</div>
+    </nav>
+    <main>
+        <h1>Bienvenido</h1>
+        <p>Aquí se muestra el contenido principal.</p>
+    </main>
+    <sidebar>
+        <h2>Actualizaciones</h2>
+        <p>Últimas noticias y actualizaciones.</p>
+    </sidebar>
+    <footer>
+        <p>&copy; </p>
+    </footer>
+</div>
+
+</body>
+</html>
