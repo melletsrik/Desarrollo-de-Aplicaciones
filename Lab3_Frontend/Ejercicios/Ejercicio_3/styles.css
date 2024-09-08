@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4a00e0;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.producto {
+    background-color: #f4f4f4;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.precio-stock {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.carrito {
+    background-color: #00c4cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito:hover {
+    background-color: #008b8b;
+}
+
+@media (max-width: 900px) { /* Breakpoint para 900px */
+    .producto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) { /* Breakpoint para 480px */
+    .navbar {
+        flex-direction: column;
+    }
+
+    .producto {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
