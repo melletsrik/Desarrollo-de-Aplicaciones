@@ -1,6 +1,19 @@
-function propina(monto, porcentaje){
-    return monto+(porcentaje/100*monto)
+function propina()
+{
+    const cuenta = parseFloat(document.getElementById('cuenta').value);
+    const porcentaje = parseFloat(document.getElementById('porcentaje').value);
+    const resultado = calcularPropina(cuenta, porcentaje);
 
-};
+    document.getElementById('propina').innerText = '$' + resultado.propina;
+    document.getElementById('total').innerText = '$' + resultado.total;
+}
 
-console.log(propina(100,20))
+function calcularPropina(cuenta, porcentaje)
+{
+    const propina = cuenta * (porcentaje / 100);
+    const total = cuenta + propina;
+    return {
+        propina,
+        total
+    };
+}
