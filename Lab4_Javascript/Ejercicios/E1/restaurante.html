@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restaurante.css">
+    <script src="restaurante.js"></script>
+    <title>El sabor tradicional</title>
+</head>
+<body>
+    <header>
+        <h1>El sabor tradicional</h1>
+        <p>Calcula tu propina fácilmente</p>
+    </header>
+    <main>
+        <section class="calculadora">
+            <h2>Calculadora de Propinas</h2>
+            <!--Ahora no acepta valores negativos--->
+            <label for="cuenta">Monto de la Cuenta:</label>
+            <input type="number" id="cuenta" placeholder="Monto de la cuenta" min="0" required>
+            
+            <label for="porcentaje">Porcentaje de Propina:</label>
+            <input type="number" id="porcentaje" placeholder="% de propina" min="0" required>
+
+            <button onclick="propina()">Calcular</button>
+
+            <div class="resultado"></div>
+                <p><strong>Propina:</strong> <span id="propina">$0.00</span></p>
+                <p><strong>Total a Pagar:</strong> <span id="total">$0.00</span></p>
+            </div>
+            <p id="error" style="color: red;"></p>
+        </section>
+    </main>
+</body>
+</html>
