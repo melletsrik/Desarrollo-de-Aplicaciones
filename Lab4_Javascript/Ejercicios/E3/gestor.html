@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="gestor.js"></script>
+    <title>Gestor de Contraseñas</title>
+</head>
+<body>
+    <header>
+        <h1>Generador de Contraseñas Seguras</h1>
+        <p>Genera una contraseña segura según tus preferencias</p>
+    </header>
+    <main>
+        <div class="container">
+            <label for="longitud">Longitud de la contraseña</label>
+            <input type="number" id="longitud" min="6" max="32" value="16">
+            <div class="checkboxes">
+                <label><input type="checkbox" id="incluyeMayus" checked> Incluir Mayúsculas</label>
+                <label><input type="checkbox" id="incluyeMinus" checked> Incluir Minúsculas</label>
+                <label><input type="checkbox" id="incluyeNums" checked> Incluir Números</label>
+                <label><input type="checkbox" id="incluyeSymbols" checked> Incluir Símbolos</label>
+            </div>
+        </div>
+        <button id="btnGenerate">Generar Contraseña</button>
+        <div class="result">
+            <label for="password">Tu Contraseña Generada:</label>
+            <input type="text" id="password" readonly>
+        </div>
+    </main>
+</body>
+</html>
