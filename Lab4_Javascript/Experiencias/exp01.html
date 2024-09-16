@@ -1,0 +1,23 @@
+
+<html></html>
+<head>
+    <title>Ejemplo JavaScript vinculado</title>
+    <script src="exp01.js"></script>
+    <script>
+        
+        function saludarDesdeEtiqueta() {
+            alert('¡Hola desde una etiqueta script en el HTML!');
+        }
+    </script>
+</head>
+<body>
+    <h3>Saludo de javascript en línea</h3>
+    <button onclick="alert('Saludo JavaScript en línea')">En línea</button>
+
+    <h3>Saludo desde una etiqueta script</h3>
+    <button onclick="saludarDesdeEtiqueta()">En etiqueta</button>   
+
+    <h3>Saludo desde un archivo vinculado</h3> 
+    <button onclick="saludar()">Vinculación</button>
+
+</body>
