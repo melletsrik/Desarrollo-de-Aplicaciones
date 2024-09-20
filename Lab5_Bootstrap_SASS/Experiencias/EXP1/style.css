@@ -1,0 +1,45 @@
+body{
+    background: #ee0979; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ee0979, #ff6a00); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ee0979, #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-primary {
+    background-color: #ff5733;
+    border-color: #ff5733;
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+}
+
+.card-body h5{
+    text-align: center;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.btn-success {
+    background-color: #ff5733;
+    border-color: #ff5733;
+    transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #ee0979;
+}
+
+.btn-primary:hover {
+    background-color: #ee0979;
+}
