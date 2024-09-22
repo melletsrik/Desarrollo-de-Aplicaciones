@@ -1,0 +1,73 @@
+body {  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 16px;  
+    background-color: #ecf0f1;  
+    color: #2c3e50;  
+    margin: 0;  
+    padding: 1rem;  
+  }  
+  
+  header {  
+    background-color: #3498db;  
+    color: white;  
+    padding: 2rem;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+  }  
+  
+  nav ul {  
+    list-style: none;  
+    padding: 0;  
+    display: flex;  
+    justify-content: center;  
+    gap: 2rem;  
+  }  
+  
+  nav ul li a {  
+    color: white;  
+    font-size: 1.2rem;  
+    text-decoration: none;  
+    padding: 1rem 1.5rem;  
+    background-color: #2ecc71;  
+    border-radius: 50px;  
+    transition: background-color 0.3s ease-in-out;  
+  }  
+  
+  nav ul li a:hover {  
+    background-color: #27ae60; /* darken-color(#2ecc71, 10%) */  
+  }  
+  
+  .container {  
+    margin-top: 3rem;  
+  }  
+  
+  .container .card {  
+    background-color: white;  
+    padding: 2rem;  
+    margin-bottom: 2rem;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    border-radius: 10px;  
+    transition: all 0.3s ease-in-out;  
+  }  
+  
+  .container .card h2 {  
+    color: #3498db;  
+  }  
+  
+  .container .card p {  
+    line-height: 1.6;  
+  }  
+  
+  .container .card:hover {  
+    background-color: #f5f5f5; /* lighten-color(#ecf0f1, 5%) */  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+  }  
+  
+  footer {  
+    background-color: #2c3e50;  
+    color: #ecf0f1;  
+    padding: 1rem;  
+    margin-top: 3rem;  
+    border-radius: 10px;  
+    text-align: center;  
+  }
