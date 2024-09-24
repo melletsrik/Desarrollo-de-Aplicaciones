@@ -1,0 +1,146 @@
+/* Colores */
+:root {
+    --verde-claro: #e0f2e9;
+    --verde-medio: #66bb6a;
+    --verde-oscuro: #388e3c;
+    --verde-hover: #2e7d32;
+  }
+  
+  /* Aplicar estilo al cuerpo */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--verde-claro);
+    color: var(--verde-oscuro);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo del encabezado */
+  header {
+    background-color: var(--verde-medio);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Botones */
+  button {
+    background-color: var(--verde-medio);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  /* Hover y animación en el botón */
+  button:hover {
+    background-color: var(--verde-hover);
+    transform: scale(1.05);
+  }
+  
+  /* Animación de entrada de elementos */
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 2s forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animación de movimiento en un contenedor */
+  .bounce {
+    animation: bounceAnimation 1.5s infinite alternate;
+  }
+  
+  @keyframes bounceAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  /* Estilo de los enlaces */
+  a {
+    color: var(--verde-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: var(--verde-hover);
+  }
+
+.card {
+
+    flex: 4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    max-width: 300px; /* Adjust the width of the card */
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+footer {
+    background-color: #e9ecef;
+}
+
+.carousel-item p {
+    font-style: italic;
+    color: #495057;
+    text-align: center;
+}
+img {
+	display: block;
+}
+
+.product-img-container {
+	height: 250px;
+	overflow: hidden;
+    margin: auto;
+    width: 100%; /* Makes the image fill the width of the card */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the space while maintaining its aspect ratio */
+}
+.products-header {
+	justify-content: space-between;
+	padding: 30px 15px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Add smooth transition for the scaling */
+  }
+  
+  /* On hover, the image scales up slightly */
+  .card img:hover {
+    transform: scale(1.1); /* Slight zoom-in on hover */
+  }
+  
+  /* Optional: Card content styling */
+  .card .card-content {
+    padding: 10px;
+  } 
