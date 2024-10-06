@@ -1,0 +1,17 @@
+/* src/componentes/Timer.css */
+.timer-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    background-color: #e9fce9;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.timer-container h3 {
+    color: red; /* El mensaje "¡Tiempo agotado!" aparecerá en rojo */
+}

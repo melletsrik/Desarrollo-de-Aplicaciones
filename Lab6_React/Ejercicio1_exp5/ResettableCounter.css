@@ -1,0 +1,39 @@
+ 
+.counter-container {  
+    margin: 20px;  
+    padding: 20px;  
+    border: 1px solid #007BFF;  
+    border-radius: 10px;  
+    background-color: #e0f7fa; /* Color de fondo */  
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */  
+    transition: transform 0.2s; /* Transición para efecto */  
+}  
+
+.counter-container:hover {  
+    transform: scale(1.02); /* Efecto de escalado al pasar el mouse */  
+}  
+
+button {  
+    margin: 5px;  
+    padding: 10px 15px;  
+    border: none;  
+    border-radius: 5px;  
+    background-color: #007BFF;  
+    color: white;  
+    cursor: pointer;  
+    font-size: 16px; /* Tamaño de fuente */  
+}  
+
+button i {  
+    margin-right: 5px; /* Espacio entre el ícono y el texto */  
+}  
+
+button:hover {  
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */  
+}  
+
+/* Estilo para el título */  
+h2 {  
+    color: #333;  
+}
