@@ -1,0 +1,40 @@
+a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff; /* Make the text white for better contrast */
+}
+
+.navbar {
+  background-color: #c0392b; /* Red */
+}
+
+/* Hero section styling */
+    .hero-section {
+      background-color: rgba(216, 69, 69, 0.5); /* White with 50% transparency */
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    /* Example styling for text */
+    .hero-section h1 {
+      color: #ffffff; /* Black text */
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      color: #c7c7c7; /* Dark grey text */
+      font-size: 1.2rem;
+    }
+
+body {
+  background-color: #e74c3c; /* Light red theme for the background */
+}
+.my-section {
+  background-image: url('./assets/images/cb.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px; /* Set a specific height for the div */
+}
