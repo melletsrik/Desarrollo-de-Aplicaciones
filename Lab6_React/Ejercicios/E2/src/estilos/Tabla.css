@@ -1,0 +1,46 @@
+/* Tabla de capítulos */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: white;
+    background-color: #69bcbc;
+  }
+  
+  thead {
+    background-color: #02132c;
+  }
+  
+  th, td {
+    padding: 12px 20px;
+    text-align: center;
+    color: black;
+  }
+  
+  th {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #aaffff;
+  }
+  
+  tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  tbody td {
+    font-size: 1em;
+  }
+  
+  table td a {
+    color: #aaffff;
+    text-decoration: none;
+  }
+  
+  table td a:hover {
+    text-decoration: underline;
+  }
+  

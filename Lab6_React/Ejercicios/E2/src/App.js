@@ -7,6 +7,10 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Login from './paginas/Login';
 import Comentario from './paginas/Comentario';
+import Capitulos from './paginas/Capitulos';
+import CapitulosNuevos from './paginas/CapitulosNuevos';
+import CapitulosMasGustados from './paginas/CapitulosMasGustados';
+import Tabla from './componentes/Tabla'
 
 
 function App() {
@@ -15,7 +19,13 @@ function App() {
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
-
+  
+  const [capitulos, setCapitulos] = useState([
+    { numero: 1, titulo: 'Capítulo 1' },
+    { numero: 2, titulo: 'Capítulo 2' },
+    { numero: 3, titulo: 'Capítulo 3' },
+  ]);
+  
   return (
     <Router>
       <div className='App'>
@@ -28,10 +38,9 @@ function App() {
             {/*Emparejamietno de rutas*/}
             <Link to="/">Inicio</Link>
             <Link to="/personajes">Personajes</Link>
+            <Link to="/capitulos">Capítulos</Link>
             <Link to="/login">Login</Link>
             <Link to="/comentario">Comentario</Link>
-            <Link to="/capitulos">Comentario</Link>
-            <Link to="/capitulos/id ">Comentario</Link>
           </nav>
 
         </div>
@@ -39,11 +48,16 @@ function App() {
           {/* Emparejamietno de rutas */}
           <Route path="/" element={<Inicio />} />
           <Route path="/personajes/*" element={<Personajes />} />
+          <Route path="/capitulos" element={<Capitulos />}>
+            {/* Ruta index para mostrar la tabla en la ruta principal de /capitulos */}
+            <Route index element={<Tabla capitulos={capitulos} />} />
+            {/* Rutas anidadas */}
+            <Route path="nuevos" element={<CapitulosNuevos />} />
+            <Route path="gustados" element={<CapitulosMasGustados />} />
+          </Route>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          {/* Ruta privada para comentarios */}
-          
+          {/* Ruta privada*/}          
           <Route path="/comentario" element={<Comentario />} />
-
         </Routes>
       </div>
     </Router>
