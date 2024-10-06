@@ -1,0 +1,20 @@
+.pruebas {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pruebas h1 {
+  color: #333;
+}
+
+.pruebas button {
+  padding: 10px 20px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pruebas button:hover {
+  background-color: #005f73;
+}
