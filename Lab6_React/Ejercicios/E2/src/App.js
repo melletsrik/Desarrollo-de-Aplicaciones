@@ -3,7 +3,7 @@ import eleceedLogo from './imagenes/logoEleceed.png';
 import Inicio from './paginas/Inicio';
 import Personajes from './paginas/Personajes';
 import Cronometro from './componentes/Cronometro';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Routes, Navigate} from 'react-router-dom';
 import { useState } from 'react';
 import Login from './paginas/Login';
 import Comentario from './paginas/Comentario';
@@ -21,13 +21,14 @@ function App() {
   };
   
   const [capitulos, setCapitulos] = useState([
-    { numero: 1, titulo: 'Capítulo 1' },
-    { numero: 2, titulo: 'Capítulo 2' },
-    { numero: 3, titulo: 'Capítulo 3' },
+    { numero: 1, titulo: 'El inicio del fin' },
+    { numero: 2, titulo: 'En lo profundo' },
+    { numero: 3, titulo: 'El encuentro' },
+    { numero: 4, titulo: 'Un día oscuro' },
   ]);
-  
+
   return (
-    <Router>
+    <BrowserRouter>
       <div className='App'>
         <div className='parteSuperior'>
           <div className='contenedorLogo'>
@@ -57,10 +58,12 @@ function App() {
           </Route>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           {/* Ruta privada*/}          
-          <Route path="/comentario" element={<Comentario />} />
+          <Route path="/comentario" element={
+            isLoggedIn ? <Comentario /> : <Navigate to="/login" />
+          } />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

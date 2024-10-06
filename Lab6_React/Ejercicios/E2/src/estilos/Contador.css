@@ -1,8 +1,7 @@
 .contador {
-    min-width: 200px;
-    height: 100px; 
-    font-size: 24px; 
-    padding: 15px;
+    min-width: 250px;
+    height: 60px; 
+    font-size: 20px; 
     display: flex;
     align-items: center;
     justify-content: center;

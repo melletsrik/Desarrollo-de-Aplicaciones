@@ -1,6 +1,6 @@
 import React from 'react';
 import '../estilos/Inicio.css';
-import bannerEleceed from '../imagenes/banner.png';
+import bannerEleceed from '../imagenes/banner3.jpeg';
 import { useState } from 'react';
 import Contador from '../componentes/Contador';
 import Boton from '../componentes/Boton';
@@ -21,8 +21,7 @@ const Inicio = () => {
   return (
     <div className="inicio">
       <div className="bannerContenedor">
-        <img aria-activedescendant=''
-          className="banner"
+        <img className="banner"
           src={bannerEleceed}
           alt="Banner Eleceed"
         />
@@ -47,10 +46,6 @@ const Inicio = () => {
           texto='Kudo <3'
           esBotonDeClic={true}
           manejarClic={manejarClic} />
-        <Boton 
-          texto='Reiniciar'
-          esBotonDeClic={false}
-          manejarClic={reiniciarContador} />
       </div>
     </div>
   );

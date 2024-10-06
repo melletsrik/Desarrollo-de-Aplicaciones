@@ -9,18 +9,18 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #02132c; /* Color oscuro */
-  background: -webkit-linear-gradient(to right, #02132c, #aaffff, #02132c);
-  background: linear-gradient(to right, #02132c, #aaffff, #02132c); 
+  background: #5185A6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #425B8C, #6DA6A0, #6DA6A0, #6DA6A0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #425B8C, #6DA6A0, #6DA6A0, #6DA6A0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contenedorPersonajes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #02132c;
-  background: -webkit-linear-gradient(to right, #02132c, #aaffff, #02132c);
-  background: linear-gradient(to right, #02132c, #aaffff, #02132c); 
+  background: #5185A6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #425B8C, #6DA6A0, #6DA6A0, #6DA6A0 ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #425B8C, #6DA6A0, #6DA6A0, #6DA6A0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
@@ -46,7 +46,6 @@ nav {
   padding: 18px; 
   border-radius: 8px;
   text-align: center;
-  margin-bottom: 20px;
   font-weight: bolder;
   text-shadow:1px 1px 2px #aaffff;
 }
