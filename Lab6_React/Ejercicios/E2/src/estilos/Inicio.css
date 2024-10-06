@@ -1,0 +1,50 @@
+.inicio {
+  text-align: center;
+  padding: 20px;
+}
+
+.bannerContenedor {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sobreposicion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
+}
+
+.tituloBanner {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.autores {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.descripcion {
+  padding: 20px;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 30px 10px;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px pink;
+  background-color: #ffffff;
+}

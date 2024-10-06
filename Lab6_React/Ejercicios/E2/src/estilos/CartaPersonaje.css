@@ -1,0 +1,51 @@
+.contenedorPersonaje {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s; 
+  min-height: 200px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+.contenedorPersonaje:hover {
+  transform: scale(1.02); /* Aumenta ligeramente al pasar el ratón */
+}
+
+.contenedorDatosPersonaje {
+  flex: 1;
+  margin-left: 20px;
+  line-height: 1.5;
+}
+
+.contenedorDatosPersonaje p {
+  flex: 1;
+  margin-left: 24px;
+}
+
+.imagenPersonaje {
+  width: 200px; 
+  height: 200px; /* Fija la altura para mantener tamaño uniforme */
+  border-radius: 8px;
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones */
+}
+
+.nombrePersonaje {
+  font-size: 2em; /* Aumenta tamaño de la letra */
+  margin: 0;
+  font-weight: bold; /* Resalta el nombre */
+}
+
+.edadPersonaje,
+.generoPersonaje,
+.poderPersonaje {
+  margin: 4px 0;
+  font-size: 1.2em; /* Aumenta tamaño de letra para mejor legibilidad */
+  color: #555; /* Color más suave */
+}
