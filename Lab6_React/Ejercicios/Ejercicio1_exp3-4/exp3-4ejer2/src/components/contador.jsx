@@ -1,7 +1,7 @@
 // Counter.js
 import React, { useState } from 'react';
 const Counter = ({ initialValue }) => {
-  const [count, setCount] = useState(initialValue); // Usar el valor pasado por props
+  const [count, setCount] = useState(initialValue); 
 
   const increment = () => setCount(count + 1);
   const decrement = () => setCount(count - 1);

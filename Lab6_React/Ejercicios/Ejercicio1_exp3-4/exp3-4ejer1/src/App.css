@@ -1,15 +1,15 @@
-    /* New background color for the navbar */
+   
     a{
         font-size: 1.5rem; font-weight: bold; letter-spacing: 2px;
     }
     .navbar {
-        background-color: #34495e; /* Darker blue */
+        background-color: #34495e; 
       }
   
-      /* Hero section styling */
+      
       .hero-section {
-        background-color: #ecf0f1; /* Light grey */
-        padding: 100px 0; /* More padding for balance */
+        background-color: #ecf0f1; 
+        padding: 100px 0; 
         text-align: center;
       }
   
@@ -23,5 +23,5 @@
         color: #7f8c8d;
       }
       body {
-        background-color: #34495e; /* Change this to any color you like */
+        background-color: #34495e; 
       }

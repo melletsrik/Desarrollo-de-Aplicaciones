@@ -6,16 +6,16 @@ div {
 
 }
 .img-scale {
-    transition: transform 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease; 
   }
 
-  /* On hover, scale the image */
+
   .img-scale:hover {
-    transform: scale(1.2); /* 1.2 = 120% of the original size */
+    transform: scale(1.2);
   }
 
   .card-img-top {
     object-fit: cover;
-    height: 200px; /* Set a consistent height */
+    height: 200px; 
     width: 100%; /* Full width of the card */
   }

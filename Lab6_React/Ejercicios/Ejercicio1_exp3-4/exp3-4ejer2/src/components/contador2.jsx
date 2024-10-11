@@ -12,7 +12,7 @@ const Counter = ({ initialValue }) => {
   return (
     <div id='flex-container1'>
       <div id='flex-auto1' onClick={toggleCounter}><h1>Añade un aplauso</h1></div>
-      {showCounter && ( // Mostrar u ocultar el contador
+      {showCounter && ( 
         <div id='default1'>
           <h2>Maquina contadora de aplausos: {count}</h2>
           <button onClick={increment}>Añadir aplauso</button>
