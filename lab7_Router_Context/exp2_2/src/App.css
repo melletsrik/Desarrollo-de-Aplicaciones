@@ -1,0 +1,81 @@
+* {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #c0392b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+button:hover {
+  background-color: #9b59b6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+input, select {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pestanas {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pestanas button {
+  background-color: #8e44ad;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.pestanas button:hover {
+  background-color: #9b59b6;
+}
+
+.pestanas button:focus {
+  outline: none;
+}
