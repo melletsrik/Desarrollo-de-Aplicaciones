@@ -1,32 +1,27 @@
-import ropaImagen from '../imagenes/ropa.JPG';  
-import ropa1Imagen from '../imagenes/polos.jpg';  
-import jeansImagen from '../imagenes/jeans.jpg';  
-import conjuntoImagen from '../imagenes/conjunto.jpg';  
+import electrodomesticosImagen from '../imagenes/electrodomesticos.jpg';  
+import licuadoraImagen from '../imagenes/licuadora.jpg';  
+import aspiradoraImagen from '../imagenes/aspiradora.jpg';  
 
-export default function Clothing() {  
+export default function Electrodomesticos() {  
     return (  
         <div style={containerStyle}>  
-            <h2>Categoria Ropa</h2>  
-            <img src={ropaImagen} alt="ROPA" style={categoryImageStyle} />  
+            <h2>Categoria Electrodomésticos</h2>  
+            <img src={electrodomesticosImagen} alt="Electrodomésticos" style={categoryImageStyle} />  
             <h3>Productos Destacados</h3>  
             <ul style={gridStyle}>  
                 <li style={productStyle}>  
-                    <img src={ropa1Imagen} alt="Polos crop" style={productImageStyle} />  
-                    <p>Producto 1 - S/.35.00</p>  
+                    <img src={licuadoraImagen} alt="Licuadora" style={productImageStyle} />  
+                    <p>Licuadora - S/.200.00</p>  
                 </li>  
                 <li style={productStyle}>  
-                    <img src={jeansImagen} alt="JEANS" style={productImageStyle} />  
-                    <p>Producto 2 - S/.85.00</p>  
+                    <img src={aspiradoraImagen} alt="Aspiradora" style={productImageStyle} />  
+                    <p>Aspiradora - S/.300.00</p>  
                 </li>  
-                <li style={productStyle}>  
-                    <img src={conjuntoImagen} alt="Conjunto" style={productImageStyle} />  
-                    <p>Producto 3 - S/.120.00</p>  
-                </li>  
-                {/* Puedes agregar más productos aquí si lo deseas */}  
             </ul>  
         </div>  
     );  
 }  
+
 
 const containerStyle = {  
     maxWidth: '800px',  
@@ -44,7 +39,7 @@ const categoryImageStyle = {
 
 const gridStyle = {  
     display: 'grid',  
-    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', // Cuadrícula responsiva  
+    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', 
     gap: '20px',  
     padding: '0',  
     listStyleType: 'none',  
@@ -64,4 +59,4 @@ const productImageStyle = {
     objectFit: 'cover',  
     borderRadius: '5px',  
     marginBottom: '10px',  
-};
+};  

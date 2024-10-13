@@ -1,32 +1,27 @@
-import ropaImagen from '../imagenes/ropa.JPG';  
-import ropa1Imagen from '../imagenes/polos.jpg';  
-import jeansImagen from '../imagenes/jeans.jpg';  
-import conjuntoImagen from '../imagenes/conjunto.jpg';  
+import accesoriosImagen from '../imagenes/accesorios.jpg';  
+import relojImagen from '../imagenes/reloj.jpg';  
+import anilloImagen from '../imagenes/anillo.jpg';  
 
-export default function Clothing() {  
+export default function Accesorios() {  
     return (  
         <div style={containerStyle}>  
-            <h2>Categoria Ropa</h2>  
-            <img src={ropaImagen} alt="ROPA" style={categoryImageStyle} />  
+            <h2>Categoria Accesorios</h2>  
+            <img src={accesoriosImagen} alt="Accesorios" style={categoryImageStyle} />  
             <h3>Productos Destacados</h3>  
             <ul style={gridStyle}>  
                 <li style={productStyle}>  
-                    <img src={ropa1Imagen} alt="Polos crop" style={productImageStyle} />  
-                    <p>Producto 1 - S/.35.00</p>  
+                    <img src={relojImagen} alt="Reloj" style={productImageStyle} />  
+                    <p>Reloj Elegante - S/.150.00</p>  
                 </li>  
                 <li style={productStyle}>  
-                    <img src={jeansImagen} alt="JEANS" style={productImageStyle} />  
-                    <p>Producto 2 - S/.85.00</p>  
+                    <img src={anilloImagen} alt="Anillo" style={productImageStyle} />  
+                    <p>Anillo de Plata - S/.75.00</p>  
                 </li>  
-                <li style={productStyle}>  
-                    <img src={conjuntoImagen} alt="Conjunto" style={productImageStyle} />  
-                    <p>Producto 3 - S/.120.00</p>  
-                </li>  
-                {/* Puedes agregar más productos aquí si lo deseas */}  
             </ul>  
         </div>  
     );  
 }  
+
 
 const containerStyle = {  
     maxWidth: '800px',  
@@ -44,7 +39,7 @@ const categoryImageStyle = {
 
 const gridStyle = {  
     display: 'grid',  
-    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', // Cuadrícula responsiva  
+    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', 
     gap: '20px',  
     padding: '0',  
     listStyleType: 'none',  
