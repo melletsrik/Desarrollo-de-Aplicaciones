@@ -1,0 +1,47 @@
+.container {
+  padding: 20px;
+  background-color: #282c34;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #61dafb;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.chapterList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chapterItem {
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #444c56;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.chapterItem a {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.chapterItem:hover {
+  background-color: #5a636d;
+  transform: scale(1.02);
+}

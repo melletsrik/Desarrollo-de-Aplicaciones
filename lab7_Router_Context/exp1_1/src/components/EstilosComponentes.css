@@ -1,0 +1,51 @@
+h1,
+h2,
+h3 {
+  color: #045ada;
+}
+
+.categoriaList,
+.animeList,
+.capituloList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.categoriaItem,
+.animeItem,
+.capituloItem {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.categoriaItem:hover,
+.animeItem:hover,
+.capituloItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.categoriaItem a,
+.animeItem a,
+.capituloItem a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.categoriaItem a:hover,
+.animeItem a:hover,
+.capituloItem a:hover {
+  color: #007bff;
+}
