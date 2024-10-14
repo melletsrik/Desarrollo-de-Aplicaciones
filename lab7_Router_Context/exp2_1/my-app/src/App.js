@@ -1,19 +1,30 @@
-
+import logo from './logo.svg';
 import './App.css';
-import React, {useState} from "react";
-import { Nav } from './components/nav';
-
-
-export const Context = React.createContext();
+import Counter from './components/contador2';
+import {Formulario} from './components/form';
+import { Listaanima } from './components/listanimal';
+import { Card } from './components/card';
+import { UserProvider } from './contexts/UserProvider';
 function App() {
+  return <UserProvider>
+        <div className='App my-section'  >
 
-  const [signedIn, setSignedIn] = useState(false)
-  return (  
-    <Context.Provider value={[signedIn, setSignedIn]}>
-      <Nav/>
-      <h1>{signedIn ? "Signed in" : "Signed out"}</h1>
-    </Context.Provider>
-  );
+    <div class="hero-section">
+      <div class="container">
+        <h1>Centro de Votaciones de los chicago bulls</h1>
+        <p>Este sitio web se encarga de resguarda a los mejores jugadores de los Chicago Bulls y los votos respectivos          
+        </p>
+      </div>
+    </div>
+    <Listaanima/>
+    <Counter initialValue={7}/>    
+    <Formulario/> 
+
+</div>
+    
+  </UserProvider>
+
+
 }
 
 export default App;

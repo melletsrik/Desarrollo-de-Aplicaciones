@@ -1,0 +1,21 @@
+div {
+
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+
+}
+.img-scale {
+    transition: transform 0.3s ease; 
+  }
+
+
+  .img-scale:hover {
+    transform: scale(1.2);
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    height: 200px; 
+    width: 100%; /* Full width of the card */
+  }

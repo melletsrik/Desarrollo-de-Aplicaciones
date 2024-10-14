@@ -1,0 +1,23 @@
+div {
+    
+    width: 100%;
+    margin-bottom: 80px; 
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+#flex-container1 {
+
+  display: flex;
+}
+
+#flex-auto1 {
+  cursor: pointer;
+  background-color: rgb(150, 15, 15);
+  color: white;
+  flex: auto;
+}
+
+#default1 {
+  background-color: rgb(255, 106, 106);
+}

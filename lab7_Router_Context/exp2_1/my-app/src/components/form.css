@@ -1,0 +1,23 @@
+div {
+    
+    width: 100%;
+    margin-bottom: 80px; 
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+#flex-container {
+  border: 2px dashed gray;
+  display: flex;
+}
+
+#flex-auto {
+  cursor: pointer;
+  background-color: wheat;
+
+  flex: auto;
+}
+
+#default {
+  background-color: lightblue;
+}
