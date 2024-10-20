@@ -2,8 +2,9 @@ import re
 import reflex as rx
 import reflex.components.radix.primitives as rdxp
 from rxconfig import config
-""" 
-class State(rx.State):
+import httpx
+
+""" class State(rx.State):
     conteo: int = 0
 
     def incrementar(self):
@@ -39,13 +40,15 @@ def experiencia1() -> rx.Component:
         justify="center",
         min_height="85vh",
     ) """
-
-""" class ListState(rx.State):
-    items: list[str] = ["Apple", "Banana", "Cherry"]
+""" 
+class ListState(rx.State):
+    items: list[str] = []
     input_value: str = ""
 
     def add_item(self):
         self.items.append(self.input_value)
+    def deletall(self):
+        self.items = []
 
 def render_item(item: rx.Var[str]):
     return rx.list.item(item)
@@ -55,30 +58,30 @@ def show_fruits():
         rx.foreach(ListState.items, render_item),
     )
 
-def Experiencia2() -> rx.Component:
+def experiencia2() -> rx.Component:
     return rx.fragment(
         
-        rx.input(placeholder="Add new item", on_change=ListState.set_input_value, value=ListState.input_value),
-        rx.button("Add Item", on_click=ListState.add_item),
+        rx.input(placeholder="Nueva tarea", on_change=ListState.set_input_value, value=ListState.input_value),
+        rx.button("Añade una tarea", on_click=ListState.add_item),
         show_fruits(),
+        rx.button("Borrar todo", on_click=ListState.deletall)     ,
     ) """
 
+
+""" 
 class RadixFormState(rx.State):
-    # These track the user input real time for validation
-    user_entered_username: str
-    user_entered_email: str
-
-    # These are the submitted data
-    username: str
-    email: str
-
+    # Inicializamos valores por defecto
+    user_entered_username: str = ""
+    user_entered_email: str = ""
+    user_entered_text: str = ""  # Nuevo campo de texto
+    username: str = ""
+    email: str = ""
+    text: str = ""  # Campo para almacenar el texto enviado
     mock_username_db: list[str] = ["reflex", "admin"]
 
     @rx.var
     def invalid_email(self) -> bool:
-        return not re.match(
-            r"[^@]+@[^@]+\.[^@]+", self.user_entered_email
-        )
+        return not re.match(r"[^@]+@[^@]+\.[^@]+", self.user_entered_email)
 
     @rx.var
     def username_empty(self) -> bool:
@@ -86,57 +89,51 @@ class RadixFormState(rx.State):
 
     @rx.var
     def username_is_taken(self) -> bool:
-        return (
-            self.user_entered_username
-            in self.mock_username_db
-        )
+        return self.user_entered_username in self.mock_username_db
 
     @rx.var
     def input_invalid(self) -> bool:
-        return (
-            self.invalid_email
-            or self.username_is_taken
-            or self.username_empty
-        )
+        return self.invalid_email or self.username_is_taken or self.username_empty
+
+    # Actualizamos los valores de los inputs sin `set_state`
+    def set_user_entered_username(self, value):
+        self.user_entered_username = value  # Se actualiza directamente
+
+    def set_user_entered_email(self, value):
+        self.user_entered_email = value  # Se actualiza directamente
+
+    def set_user_entered_text(self, value):  # Nuevo setter para el campo de texto adicional
+        self.user_entered_text = value  # Se actualiza directamente
 
     def handle_submit(self, form_data: dict):
-        """Handle the form submit."""
-        self.username = form_data.get("username")
-        self.email = form_data.get("email")
+        self.username = form_data.get("username", "")
+        self.email = form_data.get("email", "")
+        self.text = form_data.get("text", "")  # Almacenamos el texto enviado
 
-
-def radix_form_example():
+# Función para crear el formulario
+def experiencia3():
     return rx.flex(
         rx.form.root(
             rx.flex(
                 rx.form.field(
                     rx.flex(
-                        rx.form.label("Username"),
-                        rx.form.control(
-                            rx.input(
-                                placeholder="Username",
-                                # workaround: `name` seems to be required when on_change is set
-                                on_change=RadixFormState.set_user_entered_username,
-                                name="username",
-                            ),
-                            as_child=True,
+                        rx.form.label("Usuario"),
+                        rx.input(
+                            placeholder="Usuario",
+                            # Se maneja correctamente el valor
+                            on_change=lambda value: RadixFormState.set_user_entered_username(value),
+                            name="username",
                         ),
-                        # server side validation message can be displayed inside a rx.cond
+                        # Mensajes de validación
                         rx.cond(
                             RadixFormState.username_empty,
                             rx.form.message(
-                                "Username cannot be empty",
+                                "Usuario no puede estar vacio",
                                 color="var(--red-11)",
                             ),
                         ),
-                        # server side validation message can be displayed by `force_match` prop
                         rx.form.message(
                             "Username already taken",
-                            # this is a workaround:
-                            # `force_match` does not work without `match`
-                            # This case does not want client side validation
-                            # and intentionally not set `required` on the input
-                            # so "valueMissing" is always false
                             match="valueMissing",
                             force_match=RadixFormState.username_is_taken,
                             color="var(--red-11)",
@@ -150,17 +147,15 @@ def radix_form_example():
                 ),
                 rx.form.field(
                     rx.flex(
-                        rx.form.label("Email"),
-                        rx.form.control(
-                            rx.input(
-                                placeholder="Email Address",
-                                on_change=RadixFormState.set_user_entered_email,
-                                name="email",
-                            ),
-                            as_child=True,
+                        rx.form.label("Correo Electronico"),
+                        rx.input(
+                            placeholder="Correo Electronico",
+                            # Se maneja correctamente el valor
+                            on_change=lambda value: RadixFormState.set_user_entered_email(value),
+                            name="email",
                         ),
                         rx.form.message(
-                            "A valid Email is required",
+                            "Un Correo Electronico valido es necesario",
                             match="valueMissing",
                             force_match=RadixFormState.invalid_email,
                             color="var(--red-11)",
@@ -171,6 +166,22 @@ def radix_form_example():
                     ),
                     name="email",
                     server_invalid=RadixFormState.invalid_email,
+                ),
+                # Añadimos un nuevo campo de texto
+                rx.form.field(
+                    rx.flex(
+                        rx.form.label("Texto adicional"),
+                        rx.text_area( 
+                            placeholder="Texto adicional",
+                            # Se maneja correctamente el valor
+                            on_change=lambda value: RadixFormState.set_user_entered_text(value),
+                            name="text",
+                        ),
+                        direction="column",
+                        spacing="2",
+                        align="stretch",
+                    ),
+                    name="text",
                 ),
                 rx.form.submit(
                     rx.button(
@@ -188,7 +199,7 @@ def radix_form_example():
         ),
         rx.divider(size="4"),
         rx.text(
-            "Username submitted: ",
+            "Usuario subido: ",
             rx.text(
                 RadixFormState.username,
                 weight="bold",
@@ -196,9 +207,17 @@ def radix_form_example():
             ),
         ),
         rx.text(
-            "Email submitted: ",
+            "Correo subido: ",
             rx.text(
                 RadixFormState.email,
+                weight="bold",
+                color="var(--accent-11)",
+            ),
+        ),
+        rx.text(
+            "Texto subido: ",
+            rx.text(
+                RadixFormState.text,
                 weight="bold",
                 color="var(--accent-11)",
             ),
@@ -206,11 +225,46 @@ def radix_form_example():
         direction="column",
         spacing="4",
     )
+ """
 
+
+from typing import List, Dict 
+
+# Función para obtener datos de la API externa
+# Función para obtener datos de la API externa
+async def obtener_datos_api():
+    async with httpx.AsyncClient() as cliente:
+        respuesta = await cliente.get("https://jsonplaceholder.typicode.com/posts")
+        respuesta.raise_for_status()  # Asegurarse de que la solicitud fue exitosa
+        return respuesta.json()  # Retornar los datos en formato JSON
+
+# Clase de estado para manejar los datos obtenidos de la API
+class EstadoDatosAPI(rx.State):
+    datos: List[Dict[str, str]] = []  # Definimos la variable `datos` como lista
+
+    # Función para cargar los datos desde la API y actualizar el estado
+    async def cargar_datos(self):
+        self.datos = await obtener_datos_api()  # Actualizamos los datos con la respuesta de la API
+
+# Función que muestra el componente de datos obtenidos de la API
+def experiencia4():
+    return rx.fragment(
+        # Botón para cargar los datos de la API
+        rx.button("Cargar Datos", on_click=EstadoDatosAPI.cargar_datos),
+        
+        # Lista de datos obtenidos, se renderiza una lista de elementos
+        rx.foreach(
+            EstadoDatosAPI.datos,  # Iteramos sobre los datos
+            lambda dato: rx.list_item(
+                rx.text(f"Título: {dato['title']}"),  # Accedemos directamente a las claves del diccionario
+                rx.text(f"Contenido: {dato['body']}"),
+            )
+        )
+    )
 def index() -> rx.Component:
     """Función principal que organiza el diseño del componente."""
     return rx.container(
-        radix_form_example()
+        experiencia4()
     )
 
 
